@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Minutes to Seconds</title>
+</head>
+<body>
+    <h1></h1>
+     <style>
+      body {
+        font-family: monospace;, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h2 {
+        color: #423;
+      }
+
+      label {
+        font-size: 18px;
+        color: #333;
+      }
+
+      input {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      #results {
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #333;
+      }
+    </style>
+
+<script type="text/javascript">
+ function convertTime() {
+        const minutes = parseFloat(document.getElementById("minutes").value);
+
+        const seconds = minutes * 60;
+        const hours = minutes / 60;
+        const days = minutes / 1440;
+
+        document.getElementById("seconds").textContent = seconds + " seconds";
+        document.getElementById("hours").textContent = hours + " hours";
+        document.getElementById("days").textContent = days + " days";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Time Conversion From Minutes</h2>
+    <label for="minutes">Enter minutes:</label>
+    <input type="number" id="minutes" />
+    <br /><br />
+    <button onclick="convertTime()">Convert</button>
+    <br /><br />
+    <div id="results">
+      <p id="seconds"></p>
+      <p id="hours"></p>
+      <p id="days"></p>
+    </div>
+</script>
+</body>
